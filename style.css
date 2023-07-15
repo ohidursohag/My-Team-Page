@@ -1,0 +1,194 @@
+:root {
+  --font-designation: "Prompt", sans-serif;
+  --font-title: "PT Serif", serif;
+  --font-content: "Poppins", sans-serif;
+  --font-footer: "Montserrat", sans-serif;
+  --color-black: #000000;
+  --bg-color: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* ======= Header Section Start ======= */
+.header-container {
+  height: 240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 45px;
+}
+.header-title {
+  flex: 0 0 50%;
+}
+.header-title > h1 {
+  font-family: var(--font-title);
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.header-contnet-container {
+  font-family: var(--font-content);
+  flex: 0 0 50%;
+}
+.header-content-title {
+  font-family: var(--font-content);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.header-content-description {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* ======= Header Section End ======= */
+/* ======= Main Content Section Start ======= */
+
+.team-container {
+  height: 850px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.member-profile {
+  max-width: 200px;
+  position: relative;
+  justify-self: center;
+}
+
+.member-name {
+  font-family: var(--font-info);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.member-designation {
+  font-family: var(--font-designation);
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  transform: rotate(90deg);
+  width: 150px;
+  top: 66px;
+  left: 68%;
+}
+.member-2,
+.member-5 {
+  align-self: end;
+}
+/* ======= Main Content Section End ======= */
+/* ===== Footer Section Start ======= */
+
+footer {
+  font-family: var(--font-footer);
+  height: 30px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 13px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #a9a9a9;
+}
+footer span {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: rgba(169, 123, 53, 0.634);
+}
+/* ====== Footer Section End ====== */
+
+/* ========= Media Query ======== */
+
+@media screen and (max-width: 576px) {
+  .header-container {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .header-title > h1 {
+    margin-bottom: 30px;
+  }
+
+  .header-content-title {
+    font-size: 1.2rem;
+  }
+
+  .header-content-description {
+    font-size: 1rem;
+  }
+
+  .team-container {
+    height: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .member-profile {
+    max-width: 180px;
+    width: 100%;
+  }
+  .member-designation {
+    font-size: 12px;
+    top: 67px;
+    left: 68%;
+  }
+  .member-5 {
+    align-self: start;
+  }
+
+  .member-2,
+  .member-4,
+  .member-6 {
+    align-self: end;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  body {
+    padding: 0 20px 0 10px;
+  }
+  .member-designation {
+    font-size: 12px;
+    top: 67px;
+    left: 60%;
+  }
+}
+
+@media screen and (min-width: 576.2px) and (max-width: 768px) {
+  .team-container {
+    height: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .member-2,
+  .member-4,
+  .member-6 {
+    align-self: end;
+  }
+  .member-5 {
+    align-self: start;
+  }
+}
